@@ -3,12 +3,7 @@ import { Autoplay } from 'swiper/modules'
 import 'swiper/css'
 
 const clients = [
-  'Gadag Hospital',
-  'Skyline Builders',
-  'GreenHomes',
-  'City Mall',
-  'BlueStone Projects',
-  'Sparsh Retail',
+//   'Gadag Hospital'
 ]
 
 const ClientLogos = () => {

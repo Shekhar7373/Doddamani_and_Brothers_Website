@@ -5,28 +5,28 @@ import { Link } from 'react-router-dom'
 const ServicesHighlight = () => {
   const services = [
     {
-      icon: <HardHat size={56} />,
+      icon: <HardHat size={30} />,
       title: "Construction",
       description: "Full-service construction from planning to completion",
       gradient: "from-blue-600 to-cyan-600",
       accent: "blue"
     },
     {
-      icon: <ClipboardCheck size={56} />,
+      icon: <ClipboardCheck size={30} />,
       title: "Consulting",
       description: "Expert advice for your construction projects",
       gradient: "from-purple-600 to-pink-600",
       accent: "purple"
     },
     {
-      icon: <Home size={56} />,
+      icon: <Home size={30} />,
       title: "Interior Design",
       description: "Modern and functional interior solutions",
       gradient: "from-orange-600 to-red-600",
       accent: "orange"
     },
     {
-      icon: <Building size={56} />,
+      icon: <Building size={30} />,
       title: "Civil Engineering",
       description: "Infrastructure and structural engineering services",
       gradient: "from-green-600 to-emerald-600",
