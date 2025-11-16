@@ -1,5 +1,6 @@
 import Header from './Header'
 import Footer from './Footer'
+import CallFloating from './CallFloating'
 
 const Layout = ({ children }) => {
   return (
@@ -7,6 +8,7 @@ const Layout = ({ children }) => {
       <Header />
       <main className="flex-grow">{children}</main>
       <Footer />
+      <CallFloating />
     </div>
   )
 }

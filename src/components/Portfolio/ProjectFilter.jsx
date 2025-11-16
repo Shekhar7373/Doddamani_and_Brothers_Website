@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import { Filter } from 'lucide-react'
 
 const ProjectFilter = ({ filter, setFilter }) => {
-  const filters = ['all', 'ongoing', 'completed', '2024', '2023', '2022', '2021']
+  const filters = ['all', 'ongoing', 'completed']
 
   return (
     <motion.div

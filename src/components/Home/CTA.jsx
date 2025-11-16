@@ -13,77 +13,67 @@ const CTA = () => {
 
       {/* Content */}
       <div className="container mx-auto px-4 text-center relative z-10">
-        {/* Top Badge */}
+        {/* Top Badge - subtle */}
         <motion.div
-          initial={{ opacity: 0, y: -20 }}
+          initial={{ opacity: 0, y: -10 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="inline-flex items-center gap-2 bg-blue-500/20 border border-blue-400/30 rounded-full px-4 py-2 mb-8 backdrop-blur-sm"
+          className="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-3 py-1 mb-6 backdrop-blur-sm"
         >
-          <CheckCircle2 size={18} className="text-blue-300" />
-          <span className="text-sm font-semibold text-blue-200">Limited Time Offer</span>
+          <CheckCircle2 size={16} className="text-blue-200" />
+          <span className="text-sm text-blue-200">Free consultation — no obligation</span>
         </motion.div>
 
         {/* Main Heading */}
         <motion.h2
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.7 }}
           viewport={{ once: true }}
-          className="text-5xl md:text-7xl font-black mb-6 leading-tight"
+          className="text-3xl md:text-4xl font-extrabold mb-4 leading-snug"
         >
-          Ready to Start Your
-          <br />
-          <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-300 bg-clip-text text-transparent">
-            Next Project?
-          </span>
+          Ready to discuss your next project?
         </motion.h2>
 
         {/* Subheading */}
         <motion.p
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.1 }}
+          transition={{ duration: 0.7, delay: 0.05 }}
           viewport={{ once: true }}
-          className="text-xl md:text-2xl text-blue-100 mb-12 max-w-3xl mx-auto leading-relaxed"
+          className="text-base md:text-lg text-blue-100 mb-8 max-w-2xl mx-auto leading-relaxed"
         >
-          Get in touch with our experts today for a <span className="font-bold text-white">free consultation</span> and personalized quote
+          Request a free site visit or an on-site estimate — no obligation. We'll provide a clear timeline and realistic quote.
         </motion.p>
 
         {/* CTA Buttons */}
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 0.7, delay: 0.1 }}
           viewport={{ once: true }}
-          className="flex flex-col sm:flex-row gap-6 justify-center mb-12"
+          className="flex flex-col sm:flex-row gap-4 justify-center mb-8"
         >
           {/* Primary CTA */}
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
+          <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>
             <Link
               to="/contact"
-              className="group inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-10 py-4 rounded-lg font-bold text-lg shadow-2xl hover:shadow-3xl transition-all duration-300"
+              className="group inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold text-base shadow-md hover:shadow-lg transition-all duration-200"
             >
-              Get Free Quote
-              <ArrowRight className="group-hover:translate-x-1 transition-transform" size={24} />
+              Request a Quote
+              <ArrowRight className="group-hover:translate-x-1 transition-transform" size={18} />
             </Link>
           </motion.div>
 
           {/* Secondary CTA */}
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
+          <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>
             <a
               href="tel:+919480750444"
-              className="group inline-flex items-center gap-3 border-2 border-white hover:bg-white/10 backdrop-blur-sm text-white px-10 py-4 rounded-lg font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300"
+              className="group inline-flex items-center gap-2 border-2 border-white/20 bg-white/5 text-white px-6 py-3 rounded-lg font-semibold text-base shadow-sm hover:bg-white/10 transition-all duration-200"
             >
-              <Phone size={24} />
-              Call Now
+              <Phone size={18} />
+              Schedule a Call
             </a>
           </motion.div>
         </motion.div>

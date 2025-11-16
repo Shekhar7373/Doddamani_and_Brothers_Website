@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Sitemap: https://your-domain.com/sitemap.xml
+# Crawl-delay: 10
+# You can disallow staging or admin paths here if needed

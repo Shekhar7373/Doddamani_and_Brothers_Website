@@ -3,7 +3,7 @@ import { Eye, ExternalLink, X } from 'lucide-react'
 import { useState } from 'react'
 import projectsData from '../../data/projectsData.js'
 
-const ITEMS_PER_PAGE = 8
+const ITEMS_PER_PAGE = 6
 
 const ProjectGallery = ({ filter, visibleCount, setVisibleCount }) => {
   const [selectedProject, setSelectedProject] = useState(null)

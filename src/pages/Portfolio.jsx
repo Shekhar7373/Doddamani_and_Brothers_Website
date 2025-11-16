@@ -4,6 +4,17 @@ import { Image, Video } from 'lucide-react'
 import ProjectFilter from '../components/Portfolio/ProjectFilter'
 import ProjectGallery from '../components/Portfolio/ProjectGallery'
 import VideoGallery from '../components/Portfolio/VideoGallery'
+import { Helmet } from 'react-helmet-async'
+
+const PortfolioMeta = () => (
+  <Helmet>
+    <title>Portfolio — Doddamani & Brothers</title>
+    <meta name="description" content="Portfolio of Doddamani & Brothers — completed residential and commercial projects with images and video showcases." />
+    <link rel="canonical" href="https://your-domain.com/portfolio" />
+    <meta property="og:title" content="Portfolio — Doddamani & Brothers" />
+    <meta property="og:description" content="View our project gallery and video showcase highlighting our construction expertise." />
+  </Helmet>
+)
 
 const ITEMS_PER_PAGE = 8
 

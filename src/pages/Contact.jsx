@@ -2,6 +2,17 @@ import { motion } from "framer-motion";
 import { Phone, Mail, MapPin, Clock, CheckCircle2 } from "lucide-react";
 import ContactForm from "../components/Contact/ContactForm";
 import Map from "../components/Contact/Map";
+import { Helmet } from 'react-helmet-async'
+
+const ContactMeta = () => (
+  <Helmet>
+    <title>Contact — Doddamani & Brothers</title>
+    <meta name="description" content="Contact Doddamani & Brothers for a free consultation, site visit, and professional construction services in Gadag." />
+    <link rel="canonical" href="https://your-domain.com/contact" />
+    <meta property="og:title" content="Contact — Doddamani & Brothers" />
+    <meta property="og:description" content="Request a free consultation or schedule a site visit with our construction experts." />
+  </Helmet>
+)
 
 const Contact = () => {
   const contactInfo = [
@@ -36,6 +47,7 @@ const Contact = () => {
 
   return (
     <div className="bg-gradient-to-b from-white to-gray-50 overflow-hidden">
+      <ContactMeta />
       {/* Hero Section */}
       <div className="py-20">
         <div className="container mx-auto px-4">

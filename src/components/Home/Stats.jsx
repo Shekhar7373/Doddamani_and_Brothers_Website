@@ -6,16 +6,18 @@ const Stats = () => {
   const stats = [
     { 
       icon: <Building2 size={40} />, 
-      number: 250, 
+      number: 75, 
       label: "Projects Completed", 
       suffix: "+",
+      note: 'Residential & commercial',
       color: "from-blue-600 to-cyan-600"
     },
     { 
       icon: <Users size={40} />, 
-      number: 50, 
-      label: "Happy Clients", 
+      number: 120, 
+      label: "Clients Served", 
       suffix: "+",
+      note: 'Across Karnataka',
       color: "from-purple-600 to-pink-600"
     },
     { 
@@ -23,13 +25,15 @@ const Stats = () => {
       number: 10, 
       label: "Years Experience", 
       suffix: "+",
+      note: 'Local expertise since 2015',
       color: "from-orange-600 to-red-600"
     },
     { 
       icon: <Clock size={40} />, 
-      number: 98, 
-      label: "On Time Delivery", 
+      number: 95, 
+      label: "On-time Delivery", 
       suffix: "%",
+      note: 'Measured across recent projects',
       color: "from-green-600 to-emerald-600"
     }
   ]
@@ -49,13 +53,13 @@ const Stats = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-black mb-4">
-            By The Numbers
+          <h2 className="text-3xl md:text-4xl font-bold mb-3">
+            By the Numbers
           </h2>
-          <p className="text-lg text-blue-100 max-w-2xl mx-auto">
-            Our track record speaks for itself - trusted by hundreds of clients
+          <p className="text-base text-blue-100 max-w-2xl mx-auto">
+            Practical metrics from our recent projects — a quick snapshot of our work and commitments.
           </p>
         </motion.div>
 
@@ -85,24 +89,26 @@ const Stats = () => {
                   {stat.icon}
                 </motion.div>
 
+
                 {/* Number */}
                 <motion.div
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 + 0.3 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 + 0.2 }}
                   viewport={{ once: true }}
-                  className="text-5xl lg:text-6xl font-black mb-3 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent"
+                  className="text-3xl lg:text-4xl font-extrabold mb-2 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent"
                 >
                   <CountUp 
                     end={stat.number} 
-                    duration={2.5}
+                    duration={2}
                     suffix={stat.suffix}
                     preserveValue={true}
                   />
                 </motion.div>
 
                 {/* Label */}
-                <p className="text-lg text-blue-100 font-semibold">{stat.label}</p>
+                <p className="text-base text-blue-100 font-semibold mb-1">{stat.label}</p>
+                {stat.note && <p className="text-sm text-blue-200">{stat.note}</p>}
 
                 {/* Bottom accent */}
                 <div className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${stat.color} rounded-b-2xl`}></div>

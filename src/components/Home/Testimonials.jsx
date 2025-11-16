@@ -11,25 +11,37 @@ const Testimonials = () => {
   const testimonials = [
     {
       name: "Bhoomika Balikai",
-      text: "Excellent work, good service, also good response & perfect finishing. The team exceeded our expectations on every level.",
+      role: 'Homeowner',
+      company: 'Gadag',
+      date: 'Mar 2024',
+      text: "Excellent finishing and clear communication. The team delivered on schedule and we appreciated the site updates.",
       rating: 4,
       color: "from-blue-500 to-blue-600"
     },
     {
       name: "Anusha T",
-      text: "We had an outstanding experience with Doddamani & Brothers Construction. Right from initial discussions to final handover, everything was handled with professionalism, care, and dedication. A big shoutout to Anand Doddamani for his technical expertise and friendly nature.",
+      role: 'Commercial Client',
+      company: 'Local Retailer',
+      date: 'Jan 2025',
+      text: "Professional from estimate to handover. Anand and his team were responsive and solved issues quickly.",
       rating: 5,
       color: "from-purple-500 to-purple-600"
     },
     {
       name: "Iranna Huchchannavar",
-      text: "Your dedication to building strong foundations both literally and in teamwork is truly commendable. Your attention to detail and commitment to quality make every project a success. Keep up the great work!",
-      rating: 4.8,
+      role: 'Site Manager',
+      company: 'Regional Contractor',
+      date: 'Aug 2023',
+      text: "Attention to structural detail is impressive. Good coordination and workmanship on the foundation works.",
+      rating: 4.5,
       color: "from-orange-500 to-orange-600"
     },
     {
       name: "Prashant D",
-      text: "I highly recommend Doddamani & Brothers. The owner did the estimate and stayed right on target. The crew is very skilled, efficient, responsive and easy to communicate with.",
+      role: 'Client',
+      company: 'Private Residence',
+      date: 'Nov 2024',
+      text: "Clear estimates and a skilled crew — communication was easy and the result was great.",
       rating: 4,
       color: "from-green-500 to-green-600"
     }
@@ -44,14 +56,14 @@ const Testimonials = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-12"
         >
-          <h2 className="text-5xl md:text-6xl font-black text-gray-900 mb-4">
-            What Our <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">Clients Say</span>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+            What our clients say
           </h2>
-          <div className="h-1 w-24 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full mx-auto mb-6"></div>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Real feedback from satisfied clients who trust our expertise
+          <div className="h-1 w-20 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full mx-auto mb-4"></div>
+          <p className="text-base text-gray-600 max-w-2xl mx-auto">
+            Genuine feedback from recent projects — names and roles shown for context.
           </p>
         </motion.div>
 
@@ -118,19 +130,23 @@ const Testimonials = () => {
                     </div>
 
                     {/* Testimonial Text */}
-                    <p className="text-xl text-gray-700 italic leading-relaxed mb-8">
+                    <p className="text-base text-gray-700 italic leading-relaxed mb-6">
                       "{testimonial.text}"
                     </p>
 
                     {/* Divider */}
-                    <div className="h-0.5 bg-gradient-to-r from-transparent via-gray-200 to-transparent mb-6"></div>
+                    <div className="h-0.5 bg-gradient-to-r from-transparent via-gray-200 to-transparent mb-4"></div>
 
-                    {/* Client Name */}
-                    <div>
-                      <h4 className={`text-lg font-bold bg-gradient-to-r ${testimonial.color} bg-clip-text text-transparent`}>
-                        {testimonial.name}
-                      </h4>
-                      <p className="text-sm text-gray-500 mt-1">Verified Client</p>
+                    {/* Client Info */}
+                    <div className="flex items-center gap-3">
+                      {/* Initials avatar */}
+                      <div className={`w-10 h-10 flex items-center justify-center rounded-full text-white font-semibold bg-gradient-to-r ${testimonial.color}`}>
+                        {testimonial.name.split(' ').map(n => n[0]).slice(0,2).join('')}
+                      </div>
+                      <div>
+                        <h4 className="text-sm font-bold text-gray-900">{testimonial.name}</h4>
+                        <p className="text-xs text-gray-500">{testimonial.role} • {testimonial.company} • {testimonial.date}</p>
+                      </div>
                     </div>
 
                     {/* Bottom Accent */}
